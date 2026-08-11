@@ -1,0 +1,52 @@
+resources:
+  jobs:
+    sales_medallion_job:
+      name: sales-medallion-job
+
+      tasks:
+        - task_key: create_sales_table
+
+          notebook_task:
+            notebook_path: /Shared/sales-medallion/sql/01_create_sales_table
+
+          timeout_seconds: 300
+
+        - task_key: insert_sales_data
+
+          depends_on:
+            - task_key: create_sales_table
+
+          notebook_task:
+            notebook_path: /Shared/sales-medallion/sql/02_insert_sales_data
+
+          timeout_seconds: 300
+
+        - task_key: bronze_layer
+
+          depends_on:
+            - task_key: insert_sales_data
+
+          notebook_task:
+            notebook_path: /Shared/sales-medallion/sql/03_bronze_sales
+
+          timeout_seconds: 300
+            
+        - task_key: silver_layer
+
+          depends_on:
+            - task_key: bronze_layer
+
+          notebook_task:
+            notebook_path: /Shared/sales-medallion/sql/silver/04_silver_sales
+
+          timeout_seconds: 300
+
+        - task_key: gold_layer
+
+          depends_on:
+            - task_key: silver_layer
+
+          notebook_task:
+            notebook_path: /Shared/sales-medallion/sql/gold/05_gold_product_sales
+
+          timeout_seconds: 300

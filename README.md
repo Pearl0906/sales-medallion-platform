@@ -39,10 +39,34 @@ This project is being developed step by step to simulate how a real-world data e
 ```text
 sales-medallion-platform/
 │
-├── terraform/              # Infrastructure as Code
-├── databricks_bundle/      # Databricks Asset Bundle
-├── data/                   # Sample datasets
-├── docs/                   # Project documentation
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── locals.tf
+│   ├── outputs.tf
+│   └── environments/
+│       ├── dev.tfvars
+│       └── prod.tfvars
+│
+├── sql/
+│   ├── 01_create_sales_table.sql
+│   ├── 02_insert_sales_data.sql
+│   ├── 03_bronze_sales.sql
+│   │
+│   ├── silver/
+│   │   └── 04_silver_sales.sql
+│   │
+│   └── gold/
+│       └── 05_gold_product_sales.sql
+│
+├── databricks_bundle/
+│   └── resources/
+│       └── sales_job.yml
+│
+├── docs/
+│
+├── .gitignore
+├── databricks.yml
 └── README.md
 ```
 
