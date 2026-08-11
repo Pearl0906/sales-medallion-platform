@@ -2,7 +2,7 @@ bundle:
   name: sales-medallion-platform
 
 include:
-  - databricks_bundle\resources/*.yml
+  - databricks_bundle/resources/*.yml
 
 targets:
   dev:
@@ -10,4 +10,3 @@ targets:
 
     workspace:
       host: https://dbc-92680d89-60f8.cloud.databricks.com
-      profile: dev
