@@ -160,7 +160,7 @@ This project demonstrates practical experience with:
 
 **Pearl Zinhle Shungube**
 
-Master of Commerce (Business Management) | Data Engineering & Cloud Enthusiast
+Data Engineering & Cloud Enthusiast
 
 ---
 
