@@ -9,11 +9,9 @@ targets:
     mode: development
     workspace:
       host: https://dbc-92680d89-60f8.cloud.databricks.com
-      
 
   prod:
     mode: production
     workspace:
       host: https://dbc-92680d89-60f8.cloud.databricks.com
-      profile: dev
       root_path: /Shared/.bundle/${bundle.name}/${bundle.target}
