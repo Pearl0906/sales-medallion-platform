@@ -132,20 +132,6 @@ The project will use the following datasets:
 
 ---
 
-## Learning Goals
-
-This project demonstrates practical experience with:
-
-- Infrastructure as Code (Terraform)
-- Databricks Workspace Management
-- Databricks Asset Bundles
-- SQL Data Engineering
-- Medallion Architecture
-- Git & GitHub
-- DevOps Best Practices
-
----
-
 ## Future Enhancements
 
 - CI/CD pipeline using GitHub Actions
@@ -156,11 +142,5 @@ This project demonstrates practical experience with:
 
 ---
 
-## Author
 
-**Pearl Zinhle Shungube**
-
-Data Engineering & Cloud Enthusiast
-
----
 
