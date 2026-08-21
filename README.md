@@ -134,9 +134,6 @@ The project will use the following datasets:
 
 ## Future Enhancements
 
-- CI/CD pipeline using GitHub Actions
-- Multiple deployment environments (Development, Test, Production)
-- Automated workflow deployment
 - Monitoring and alerting
 - Unit and integration testing
 
